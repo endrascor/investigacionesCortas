@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investigación Corta 3: Accesibilidad Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #111;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #003366;
+    }
+
+    h3 {
+      color: #0055a5;
+    }
+
+    code {
+      background: #eee;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+    }
+
+    img {
+      display: block;
+      margin: 10px auto;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Investigación Corta 3: Accesibilidad Web</h1>
+  </header>
+
+  <section>
+    <h2>¿Qué es la Accesibilidad Web?</h2>
+    <p>
+      La <strong>accesibilidad web</strong> consiste en diseñar y desarrollar sitios que puedan ser utilizados por todas las personas, 
+      incluyendo aquellas con discapacidades visuales, auditivas, motoras o cognitivas. Su objetivo es eliminar las barreras digitales, 
+      permitiendo que todos los usuarios comprendan, naveguen e interactúen con la web de manera eficaz y equitativa.
+    </p>
+  </section>
+
+  <section>
+    <h2>Importancia de la Accesibilidad Web</h2>
+    <h3>Perspectiva ética</h3>
+    <p>
+      La accesibilidad es un compromiso ético hacia la inclusión y la igualdad de oportunidades. 
+      Toda persona tiene derecho a acceder a la información y a participar plenamente en la sociedad digital.
+    </p>
+
+    <h3>Perspectiva legal</h3>
+    <p>
+      En muchos países, la accesibilidad web es una obligación legal. Normativas como la <strong>Sección 508</strong> en EE.UU. 
+      o el <strong>Real Decreto 1112/2018</strong> en España, establecen estándares mínimos de accesibilidad para sitios gubernamentales 
+      y educativos, basados en las pautas <strong>WCAG</strong>.
+    </p>
+
+    <h3>Mejora en la calidad del código</h3>
+    <p>
+      Implementar accesibilidad promueve buenas prácticas de desarrollo, mejora el SEO, 
+      aumenta la compatibilidad entre navegadores y dispositivos, y genera una mejor experiencia para todos los usuarios.
+    </p>
+  </section>
+
+  <section>
+    <h2>Principios de las WCAG (Web Content Accessibility Guidelines)</h2>
+    <p>Las WCAG se fundamentan en cuatro principios conocidos como <strong>POUR</strong>:</p>
+    <ol>
+      <li><strong>Perceptible:</strong> la información debe presentarse de manera que los usuarios puedan percibirla.</li>
+      <li><strong>Operable:</strong> los elementos deben ser manejables mediante diferentes dispositivos, como teclado o lector de pantalla.</li>
+      <li><strong>Comprensible:</strong> la información y las operaciones deben ser fáciles de entender.</li>
+      <li><strong>Robusto:</strong> el contenido debe ser compatible con tecnologías asistivas.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Ejemplos de los principios WCAG</h2>
+
+    <h3>1. Perceptible</h3>
+    <p>Se debe ofrecer texto alternativo para las imágenes:</p>
+    <pre><code>&lt;img src="logo.png" alt="Logotipo de la empresa Digicell CR" /&gt;</code></pre>
+
+    <h3>2. Operable</h3>
+    <p>Todos los elementos interactivos deben poder usarse con teclado:</p>
+    <pre><code>&lt;button onclick="alert('Gracias por tu visita')" tabindex="0"&gt;Enviar&lt;/button&gt;</code></pre>
+
+    <h3>3. Comprensible</h3>
+    <p>Los formularios deben tener etiquetas claras y descripciones:</p>
+    <pre><code>&lt;label for="correo"&gt;Correo electrónico:&lt;/label&gt;
+&lt;input id="correo" type="email" required aria-required="true" /&gt;</code></pre>
+
+    <h3>4. Robusto</h3>
+    <p>El contenido debe ser interpretable por lectores de pantalla:</p>
+    <pre><code>&lt;div role="alert"&gt;El formulario fue enviado correctamente&lt;/div&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>Ejemplo Práctico de Accesibilidad</h2>
+
+    <h3>Navegación con el teclado</h3>
+    <p>
+      Todos los enlaces y botones de esta página son accesibles usando la tecla <strong>Tab</strong> 
+      para moverse entre ellos y <strong>Enter</strong> para activarlos.
+    </p>
+
+    <h3>HTML semántico</h3>
+    <p>
+      Este documento utiliza etiquetas estructurales como <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, y <code>&lt;footer&gt;</code>, 
+      lo que mejora la organización del contenido y la compatibilidad con herramientas de asistencia.
+    </p>
+
+    <h3>Uso de WAI-ARIA</h3>
+    <p>
+      A continuación, un ejemplo de un formulario accesible con atributos ARIA:
+    </p>
+
+    <pre><code>&lt;form aria-label="Formulario de suscripción"&gt;
+  &lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;
+  &lt;input id="email" type="email" aria-required="true" required /&gt;
+  &lt;button type="submit"&gt;Suscribirse&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>Bibliografía</h2>
+    <ul>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">Pautas de Accesibilidad para el Contenido Web (WCAG) - W3C</a></li>
+      <li><a href="https://accesibilidadweb.dlsi.ua.es/?menu=principios" target="_blank">Principios de Accesibilidad Web</a></li>
+      <li><a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank">WAI-ARIA Authoring Practices Guide</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 - Investigación sobre Accesibilidad Web. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
